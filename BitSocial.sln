@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitSocial", "BitSocial\BitSocial.csproj", "{BBFFF942-4B8C-4707-B3B7-A814427A7586}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BitSocialEntities", "BitSocialEntities\BitSocialEntities.sqlproj", "{2C198BF4-EA4A-4ABC-BAC1-F689AF0EB872}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBFFF942-4B8C-4707-B3B7-A814427A7586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFFF942-4B8C-4707-B3B7-A814427A7586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFFF942-4B8C-4707-B3B7-A814427A7586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFFF942-4B8C-4707-B3B7-A814427A7586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C198BF4-EA4A-4ABC-BAC1-F689AF0EB872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C198BF4-EA4A-4ABC-BAC1-F689AF0EB872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C198BF4-EA4A-4ABC-BAC1-F689AF0EB872}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2C198BF4-EA4A-4ABC-BAC1-F689AF0EB872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C198BF4-EA4A-4ABC-BAC1-F689AF0EB872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C198BF4-EA4A-4ABC-BAC1-F689AF0EB872}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66028F0B-1FD6-4B18-BB7D-176A6A604FE3}
+	EndGlobalSection
+EndGlobal

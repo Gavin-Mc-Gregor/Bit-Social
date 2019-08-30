@@ -1,0 +1,54 @@
+﻿@model BitSocial.Models.User
+@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    ViewBag.Title = "Login";
+}
+<!DOCTYPE html>
+
+
+<meta name="viewport" content="width=device-width" />
+<h1>User Login</h1>
+
+<div id="login">
+    @using (Html.BeginForm("Authorise", "UserLogin", FormMethod.Post))
+    {
+       @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <hr />
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Login" class="btn btn-default" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <label class=" label-warning">@ViewBag.NoUser</label>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+<div>
+    <h3>Dont have an account with us?</h3>
+    @Html.ActionLink("Register here.", "../User/AddOrEdit")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
