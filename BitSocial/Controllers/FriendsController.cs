@@ -9,29 +9,43 @@ namespace BitSocial.Controllers
 {
     public class FriendsController : Controller
     {
-        [HttpPost]
-        public ActionResult Accept(int UserID)
-        {
-            var myID = LoggedUser.LoggedUser.GetUser().GetUserID;
-            using (DBFriendsModel db = new DBFriendsModel())
-            {
-                var friendship = db.Friends.Where(x => x.UserID == myID && x.FriendID == UserID).First();
-                friendship.Accepted = true;
+        //[HttpPost]
+        //public ActionResult Accept(int UserID)
+        //{
+        //    var myID = LoggedUser.LoggedUser.GetUser().GetUserID;
+        //    using (DBFriendsModel db = new DBFriendsModel())
+        //    {
+        //        var friendship = db.Friends.Where(x => x.UserID == myID && x.FriendID == UserID).First();
+        //        friendship.Accepted = true;
                 
-            }
-            return RedirectToAction("Requests");
-        }
-        [HttpPost]
-        public ActionResult Decline(int UserID)
-        {
-            var myID = LoggedUser.LoggedUser.GetUser().GetUserID;
-            using (DBFriendsModel db = new DBFriendsModel())
-            {
-                var friendship = db.Friends.Where(x => x.UserID == myID && x.FriendID == UserID).First();
-                db.Friends.Remove(friendship);
+        //    }
+        //    return RedirectToAction("Requests");
+        //}
+        //[HttpPost]
+        //public ActionResult Decline(int UserID)
+        //{
+        //    var myID = LoggedUser.LoggedUser.GetUser().GetUserID;
+        //    using (DBFriendsModel db = new DBFriendsModel())
+        //    {
+        //        var friendship = db.Friends.Where(x => x.UserID == myID && x.FriendID == UserID).First();
+        //        db.Friends.Remove(friendship);
 
-            }
-            return RedirectToAction("Requests");
+        //    }
+        //    return RedirectToAction("Requests");
+        //}
+        //public ActionResult Details(int UserID)
+        //{
+        //    DBFriendsModel db = new DBFriendsModel();
+        //    var friend = db.Friends.Find(UserID);
+        //    return View(friend);
+        //}
+        [HttpPost]
+        public ActionResult Edit(FriendsModel friend)
+        {
+            FriendsModel friends = new FriendsModel();
+            List<FriendsModel> notificationsList = new List<FriendsModel>();
+            notificationsList = friends.GetNotifications();
+            return View(notificationsList);
         }
         public ActionResult Requests()
         {

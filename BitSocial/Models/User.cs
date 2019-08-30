@@ -31,6 +31,8 @@ namespace BitSocial.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is required")]
+        [RegularExpression(@"^(?=.{6,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$",
+                            ErrorMessage = "Password must contain: atleast one number, atleast one special character, and both uppercase and lowwercase.")]
         [Display(Name = "Password:")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
