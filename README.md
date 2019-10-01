@@ -6,7 +6,7 @@
 <li>Sql Server</li>
 </ul>
 <hr/>
-<h2>1) SQL download and install</h2>
+<h2>1) SQL download and install.</h2>
 <ol>
 <li>Download Sql express</li>
 <ul>
